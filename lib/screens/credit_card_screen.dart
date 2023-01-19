@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:nubank/screens/select_card_screen.dart';
 
 class MyCreditCards extends StatelessWidget {
   const MyCreditCards({super.key});
@@ -34,7 +35,13 @@ class MyCreditCards extends StatelessWidget {
               const SizedBox(
                 height: 55,
               ),
-              _renderInfoCard("Cartão virtual", "*** 8623", true),
+              GestureDetector(
+                onTap: () => {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const SelectCard())),
+                },
+                child: _renderInfoCard("Cartão virtual", "*** 8623", true),
+              ),
             ],
           ),
         ),
@@ -42,7 +49,11 @@ class MyCreditCards extends StatelessWidget {
     );
   }
 
-  Widget _renderInfoCard(String title, String cardNumber, bool? container) {
+  Widget _renderInfoCard(
+    String title,
+    String cardNumber,
+    bool? container,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

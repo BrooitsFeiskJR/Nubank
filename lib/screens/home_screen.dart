@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:nubank/widgets/balance_and_payment.dart';
-import 'package:nubank/widgets/button_credit_carts_widget.dart';
 
 import 'package:nubank/widgets/header_home_screen.dart';
 import 'package:nubank/widgets/info_credit_card_widget.dart';

@@ -25,7 +25,7 @@ class _HeaderHomeState extends State<HeaderHome> {
                 width: 50,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color.fromRGBO(155, 3, 252, 1),
+                  color: Color.fromARGB(255, 157, 16, 252),
                 ),
                 child: const Icon(
                   Icons.person,
