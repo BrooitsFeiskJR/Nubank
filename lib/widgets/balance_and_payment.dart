@@ -2,80 +2,78 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:nubank/widgets/credit_carts_widget.dart';
 
 class BalancePayment extends StatelessWidget {
   const BalancePayment({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        width: double.infinity,
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return Padding(
+      padding: const EdgeInsets.all(25.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Column(
+                // ignore: prefer_const_literals_to_create_immutables
+                crossAxisAlignment: CrossAxisAlignment.start,
+                // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  Column(
-                    // ignore: prefer_const_literals_to_create_immutables
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Text(
-                        "Conta",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Text(
-                        "R\$ 20.379,98",
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(
-                      bottom: 42,
+                  Text(
+                    "Conta",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                    child: Icon(Icons.chevron_right_outlined),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "R\$ 20.379,98",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
-              SizedBox(
-                height: 40,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    _paymentMethod(Icons.pix_outlined, "Pix"),
-                    _paymentMethod(FontAwesomeIcons.barcode, "Pagar"),
-                    _paymentMethod(
-                        FontAwesomeIcons.moneyBillTransfer, "Transferir"),
-                    _paymentMethod(Icons.payment_outlined, "Depositar"),
-                  ],
+              Container(
+                padding: EdgeInsets.only(
+                  bottom: 42,
                 ),
-              )
+                child: Icon(Icons.chevron_right_outlined),
+              ),
             ],
           ),
-        ),
+          SizedBox(
+            height: 40,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _paymentMethod(Icons.pix_outlined, "Pix"),
+                _paymentMethod(FontAwesomeIcons.barcode, "Pagar"),
+                _paymentMethod(
+                    FontAwesomeIcons.moneyBillTransfer, "Transferir"),
+                _paymentMethod(Icons.payment_outlined, "Depositar"),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 45,
+          ),
+          CreditCardContainer(),
+        ],
       ),
     );
   }
 
-// Icons.pix_outline, pix | barcode Pagar | fontAwesome moneyBillTransfer transferir | icons.payment depositar
   Widget _paymentMethod(
     IconData icon,
     String methodLabel,

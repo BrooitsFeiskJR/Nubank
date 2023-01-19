@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:nubank/widgets/balance_and_payment.dart';
+import 'package:nubank/widgets/credit_carts_widget.dart';
+
 import 'package:nubank/widgets/header_home_screen.dart';
+import 'package:nubank/widgets/info_credit_card_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,11 +17,32 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           // ignore: prefer_const_literals_to_create_immutables
+
           children: [
             // Header
             HeaderHome(),
-            // saldo
-            BalancePayment(),
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                color: Colors.white,
+                child: ListView(
+                  children: [
+                    Column(
+                      children: [
+                        // saldo
+                        BalancePayment(),
+                        Container(
+                          width: 600,
+                          height: 1,
+                          color: Colors.grey[300],
+                        ),
+                        CreditCardInfo()
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
