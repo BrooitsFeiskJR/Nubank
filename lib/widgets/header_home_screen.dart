@@ -1,8 +1,15 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
-class HeaderHome extends StatelessWidget {
+class HeaderHome extends StatefulWidget {
   const HeaderHome({super.key});
 
+  @override
+  State<HeaderHome> createState() => _HeaderHomeState();
+}
+
+class _HeaderHomeState extends State<HeaderHome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -28,27 +35,15 @@ class HeaderHome extends StatelessWidget {
               Row(
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  Icon(
-                    Icons.visibility_outlined,
-                    color: Colors.white,
-                    size: 25,
-                  ),
+                  _IconsHeader(Icons.visibility_off_outlined),
                   const SizedBox(
                     width: 20,
                   ),
-                  Icon(
-                    Icons.help_outline_outlined,
-                    color: Colors.white,
-                    size: 25,
-                  ),
+                  _IconsHeader(Icons.help_outline),
                   const SizedBox(
                     width: 20,
                   ),
-                  Icon(
-                    Icons.mail_outline,
-                    color: Colors.white,
-                    size: 25,
-                  ),
+                  _IconsHeader(Icons.mail_outline),
                 ],
               )
             ],
@@ -65,6 +60,14 @@ class HeaderHome extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _IconsHeader(IconData icon) {
+    return Icon(
+      icon,
+      color: Colors.white,
+      size: 25,
     );
   }
 }

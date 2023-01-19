@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nubank/widgets/credit_carts_widget.dart';
+import 'package:nubank/widgets/button_credit_carts_widget.dart';
 
 class BalancePayment extends StatelessWidget {
   const BalancePayment({super.key});
