@@ -1,8 +1,8 @@
-# Clona do Nubank
+# Clone do Nubank
 
 
 
-## Dsenvolvimento com Flutter
+## Dsenvolvimento feito com Flutter
 
 A ideia desse projeto era clonar a interface do nubank, para fins de aprendizados.
 
