@@ -4,5 +4,5 @@
 
 ## Dsenvolvimento feito com Flutter
 
-A ideia desse projeto era clonar a interface do nubank, para fins de aprendizados.
+A ideia desse projeto é clonar a interface do nubank, para fins de aprendizados.
 
