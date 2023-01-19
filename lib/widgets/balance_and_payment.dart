@@ -53,14 +53,25 @@ class BalancePayment extends StatelessWidget {
             height: 40,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 10.0),
+            padding: const EdgeInsets.only(
+              left: 1.0,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _paymentMethod(Icons.pix_outlined, "Pix"),
+                SizedBox(
+                  width: 3,
+                ),
                 _paymentMethod(FontAwesomeIcons.barcode, "Pagar"),
+                SizedBox(
+                  width: 3,
+                ),
                 _paymentMethod(
                     FontAwesomeIcons.moneyBillTransfer, "Transferir"),
+                SizedBox(
+                  width: 3,
+                ),
                 _paymentMethod(Icons.payment_outlined, "Depositar"),
               ],
             ),

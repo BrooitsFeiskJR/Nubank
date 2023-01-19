@@ -73,6 +73,25 @@ class CreditCardInfo extends StatelessWidget {
               fontSize: 17,
             ),
           ),
+          SizedBox(
+            height: 4,
+          ),
+          RichText(
+            text: TextSpan(
+              text: 'Limite adicional para boletos: ',
+              style: TextStyle(
+                fontSize: 17,
+                color: Colors.grey[500],
+              ),
+              children: const <TextSpan>[
+                TextSpan(
+                    text: 'R\$ 562,20',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(130, 10, 209, 1))),
+              ],
+            ),
+          ),
         ],
       ),
     );
