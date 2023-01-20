@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:nubank/screens/profile_screen.dart';
 
 class HeaderHome extends StatefulWidget {
   const HeaderHome({super.key});
@@ -27,9 +28,15 @@ class _HeaderHomeState extends State<HeaderHome> {
                   shape: BoxShape.circle,
                   color: Color.fromARGB(255, 157, 16, 252),
                 ),
-                child: const Icon(
-                  Icons.person,
-                  color: Colors.white,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: ((context) => ProfileScreen())));
+                  },
+                  child: const Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
                 ),
               ),
               Row(
