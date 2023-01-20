@@ -15,7 +15,15 @@ class MyCreditCards extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.close, size: 30, color: Colors.grey[500]),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.close,
+                    size: 30,
+                    color: Colors.grey[500],
+                  )),
               SizedBox(
                 height: 20,
               ),

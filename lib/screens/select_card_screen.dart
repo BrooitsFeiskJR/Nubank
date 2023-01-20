@@ -17,7 +17,10 @@ class SelectCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.close, size: 35, color: Colors.grey[500]),
+                  GestureDetector(
+                    onTap: () => {Navigator.pop(context)},
+                    child: Icon(Icons.close, size: 35, color: Colors.grey[500]),
+                  ),
                   // ignore: prefer_const_constructors
                   Text(
                     "Cartão Virtual",
