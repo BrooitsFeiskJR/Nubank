@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank/model/discover_more_options.dart';
+import 'package:nubank/features/home/model/discover_more_options.dart';
 
 class DiscoverSection extends StatelessWidget {
   const DiscoverSection({

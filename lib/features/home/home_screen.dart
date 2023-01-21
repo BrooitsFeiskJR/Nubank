@@ -1,13 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:nubank/mocks/mock_data.dart';
-import 'package:nubank/widgets/balance_and_payment.dart';
-import 'package:nubank/widgets/discover_widget.dart';
+import 'package:nubank/features/home/mocks/mock_data.dart';
+import 'package:nubank/features/home/widgets/balance_and_payment.dart';
+import 'package:nubank/features/home/widgets/discover_widget.dart';
 
-import 'package:nubank/widgets/header_home_screen.dart';
-import 'package:nubank/widgets/info_credit_card_widget.dart';
-import 'package:nubank/widgets/loan_widget.dart';
+import 'package:nubank/features/home/widgets/header_home_screen.dart';
+import 'package:nubank/features/home/widgets/info_credit_card_widget.dart';
+import 'package:nubank/features/home/widgets/loan_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({

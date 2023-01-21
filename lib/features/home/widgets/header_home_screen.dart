@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:nubank/screens/profile_screen.dart';
+import 'package:nubank/features/home/controller/home_controller.dart';
+import 'package:nubank/features/profile/profile_screen.dart';
+import 'package:provider/provider.dart';
 
 class HeaderHome extends StatefulWidget {
   const HeaderHome({super.key});
@@ -13,6 +15,7 @@ class HeaderHome extends StatefulWidget {
 class _HeaderHomeState extends State<HeaderHome> {
   @override
   Widget build(BuildContext context) {
+    final controller = context.watch<HomeController>();
     return Padding(
       padding: const EdgeInsets.all(25),
       child: Column(
@@ -42,15 +45,19 @@ class _HeaderHomeState extends State<HeaderHome> {
               Row(
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                  _IconsHeader(Icons.visibility_off_outlined),
+                  GestureDetector(
+                      onTap: () {
+                        controller.changeStateHome();
+                      },
+                      child: _iconsHeader(Icons.visibility_off_outlined)),
                   const SizedBox(
                     width: 20,
                   ),
-                  _IconsHeader(Icons.help_outline),
+                  _iconsHeader(Icons.help_outline),
                   const SizedBox(
                     width: 20,
                   ),
-                  _IconsHeader(Icons.mail_outline),
+                  _iconsHeader(Icons.mail_outline),
                 ],
               )
             ],
@@ -70,7 +77,7 @@ class _HeaderHomeState extends State<HeaderHome> {
     );
   }
 
-  Widget _IconsHeader(IconData icon) {
+  Widget _iconsHeader(IconData icon) {
     return Icon(
       icon,
       color: Colors.white,

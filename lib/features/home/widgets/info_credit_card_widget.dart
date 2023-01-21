@@ -1,13 +1,17 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:nubank/features/home/controller/home_controller.dart';
+
+import 'package:provider/provider.dart';
 
 class CreditCardInfo extends StatelessWidget {
   const CreditCardInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = context.watch<HomeController>();
+
     return Padding(
       padding: const EdgeInsets.only(
         left: 30,
@@ -57,9 +61,11 @@ class CreditCardInfo extends StatelessWidget {
             height: 14,
           ),
           Text(
-            "R\$ 1.094.80",
+            controller.homeState == HomeState.showing
+                ? "R\$ 1.094.80"
+                : "***********",
             style: TextStyle(
-              fontSize: 28,
+              fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
           ),

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nubank/screens/credit_card_screen.dart';
+import 'package:nubank/features/cards/credit_card_screen.dart';
 
 class CreditCardContainer extends StatelessWidget {
   const CreditCardContainer({super.key});

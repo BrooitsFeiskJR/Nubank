@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nubank/model/discover_more_options.dart';
-import 'package:nubank/model/profile_options.dart';
+import 'package:nubank/features/home/model/discover_more_options.dart';
+import 'package:nubank/features/home/model/profile_options.dart';
 
 mixin MockDataBase implements Discovery {
   static final discoveryitems = [

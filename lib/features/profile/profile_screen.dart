@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
-import 'package:nubank/mocks/mock_data.dart';
-import 'package:nubank/model/profile_options.dart';
+import 'package:nubank/features/home/mocks/mock_data.dart';
+import 'package:nubank/features/home/model/profile_options.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({super.key});

@@ -2,13 +2,27 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nubank/widgets/button_credit_carts_widget.dart';
+import 'package:nubank/features/home/controller/home_controller.dart';
+import 'package:nubank/features/home/widgets/button_credit_carts_widget.dart';
+import 'package:provider/provider.dart';
 
-class BalancePayment extends StatelessWidget {
+class BalancePayment extends StatefulWidget {
   const BalancePayment({super.key});
 
   @override
+  State<BalancePayment> createState() => _BalancePaymentState();
+}
+
+class _BalancePaymentState extends State<BalancePayment> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final controller = context.watch<HomeController>();
+
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: Column(
@@ -33,7 +47,9 @@ class BalancePayment extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                    "R\$ 20.379,98",
+                    controller.homeState == HomeState.showing
+                        ? "R\$ 20.379,98"
+                        : "***********",
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,

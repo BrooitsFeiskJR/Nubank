@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:nubank/screens/select_card_screen.dart';
+import 'package:nubank/features/select_card/select_card_screen.dart';
 
 class MyCreditCards extends StatelessWidget {
   const MyCreditCards({super.key});
